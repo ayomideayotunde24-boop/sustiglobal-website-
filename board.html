@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SustiGlobal Resources Limited | Sustainability & Environmental Management Consulting</title>
+<title>Our Board of Directors | SustiGlobal Resources Limited | Sustainability & Environmental Management Consulting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -213,6 +213,36 @@ ul{list-style:none}
 .v-name{font-weight:600;font-size:14px;color:var(--forest);margin-bottom:7px;display:flex;align-items:center;gap:8px}
 .v-name::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
 .v-desc{font-size:12.5px;line-height:1.62;color:var(--grey)}
+
+
+/* ── TEAM ──────────────────────────────────────── */
+.team-header{background:var(--forest);padding:120px 0 68px;position:relative;overflow:hidden}
+.team-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 75% 30%,rgba(200,148,26,.12),transparent);pointer-events:none}
+.team-header-inner{position:relative;z-index:1}
+.team-header .tag{color:var(--gold);margin-bottom:14px}
+.team-header .h2{color:#fff;margin-bottom:16px}
+.team-header p{color:rgba(255,255,255,.55);font-size:16px;line-height:1.75;max-width:560px}
+.team-back{display:inline-flex;align-items:center;gap:8px;margin-top:30px;font-size:13px;font-weight:600;color:var(--gold);transition:gap .2s,color .2s}
+.team-back:hover{gap:12px;color:var(--gold-lt)}
+
+.team-people{padding:100px 0 124px;background:var(--white)}
+.full-people-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.fp-card{background:var(--sage);border-radius:var(--r);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.fp-card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(13,59,46,.14)}
+.fp-photo{width:100%;aspect-ratio:3/4;overflow:hidden;background:rgba(13,59,46,.06)}
+.fp-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.fp-info{padding:22px 20px 26px}
+.fp-name{font-family:var(--ff-d);font-size:18px;font-weight:600;color:var(--forest);margin-bottom:4px;line-height:1.3}
+.fp-role{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--emerald);margin-bottom:12px}
+.fp-bio{font-size:13px;line-height:1.65;color:var(--grey)}
+.fp-links{display:flex;gap:8px;margin-top:16px}
+.fp-link{width:30px;height:30px;border-radius:50%;background:rgba(13,59,46,.06);display:flex;align-items:center;justify-content:center;color:var(--forest);font-size:12px;transition:all .2s}
+.fp-link:hover{background:var(--gold);color:#fff}
+.fp-avatar{width:100%;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.fp-avatar i{font-size:2.4rem;color:rgba(255,255,255,.5)}
+.fp-avatar::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'%3E%3Ccircle cx='60' cy='28' r='22' fill='rgba(255,255,255,0.10)'/%3E%3Cellipse cx='60' cy='85' rx='38' ry='20' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E") center/cover}
+@media(max-width:960px){.full-people-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.full-people-grid{grid-template-columns:1fr}}
 
 /* ── WHY ───────────────────────────────────────── */
 .why{padding:100px 0;background:var(--sage)}
@@ -483,7 +513,7 @@ ul{list-style:none}
     <a class="sb-link" href="team.html" data-section="team">
       <span class="sb-icon"><i class="fa-solid fa-users"></i></span> Our Team
     </a>
-    <a class="sb-link" href="board.html" data-section="board">
+    <a class="sb-link active" href="board.html" data-section="board">
       <span class="sb-icon"><i class="fa-solid fa-user-tie"></i></span> Board of Directors
     </a>
     <a class="sb-link" href="services.html" data-section="services">
@@ -494,7 +524,7 @@ ul{list-style:none}
     </a>
 
     <div class="sb-section-label">Learn More</div>
-    <a class="sb-link active" href="approach.html" data-section="approach">
+    <a class="sb-link" href="approach.html" data-section="approach">
       <span class="sb-icon"><i class="fa-solid fa-bullseye"></i></span> Our Approach
     </a>
     <a class="sb-link" href="resources.html" data-section="resources">
@@ -528,26 +558,150 @@ ul{list-style:none}
 
 <!-- ══ PAGE: HOME ════════════════════════════════════════════ -->
 
-<div class="page-view active" data-page="approach">
+<div class="page-view active" data-page="board">
 
-<!-- ══ APPROACH ═══════════════════════════════════════════════ -->
-<section class="approach" id="approach">
+<!-- ══ BOARD HEADER ═══════════════════════════════════════════ -->
+<section class="team-header">
+  <div class="wrap team-header-inner reveal">
+    <p class="tag">Governance</p>
+    <h2 class="h2">Our Board of <em>Directors</em></h2>
+    <p>Providing strategic oversight and governance to guide SustiGlobal's mission and long-term impact. Profiles below are placeholders — add real names, titles, photos, and bios.</p>
+    <a href="about.html" class="team-back"><i class="fa-solid fa-arrow-left"></i> Back to About</a>
+  </div>
+</section>
+
+<!-- ══ BOARD GRID ═════════════════════════════════════════════ -->
+<section class="team-people" id="board">
   <div class="wrap">
-    <div class="app-hd reveal">
-      <p class="tag">Our Process</p>
-      <h2 class="h2" style="margin-top:14px;">How We Deliver <em>Excellence</em></h2>
-      <p style="color:var(--grey);margin-top:16px;font-size:16px;line-height:1.65;">A disciplined, evidence-based methodology that transforms sustainability challenges into strategic opportunities.</p>
-    </div>
-    <div class="app-steps reveal">
-      <div class="a-step"><div class="a-circ">01</div><h3 class="a-name">Understand</h3><p class="a-desc">Deep listening&mdash;mapping your business context, sustainability challenges, stakeholder expectations, and strategic objectives through comprehensive assessment.</p></div>
-      <div class="a-step"><div class="a-circ">02</div><h3 class="a-name">Strategize</h3><p class="a-desc">Tailored strategies aligned with international best practices and local contexts&mdash;practical, evidence-based, and built for real-world implementation.</p></div>
-      <div class="a-step"><div class="a-circ">03</div><h3 class="a-name">Implement</h3><p class="a-desc">Hands-on execution alongside your teams, building internal capabilities and ensuring smooth delivery through sustainable change management.</p></div>
-      <div class="a-step"><div class="a-circ">04</div><h3 class="a-name">Optimize</h3><p class="a-desc">Robust monitoring frameworks that track performance, continuously identify improvements, and keep your sustainability journey advancing.</p></div>
+    <div class="full-people-grid">
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#0D3B2E 0%,#1A6B4A 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 1</div>
+          <div class="fp-role">Chairperson of the Board</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#1A6B4A 0%,#2A8B62 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 2</div>
+          <div class="fp-role">Vice Chairperson</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#0D3B2E 0%,#C8941A 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 3</div>
+          <div class="fp-role">Independent Non-Executive Director</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#2A8B62 0%,#0D3B2E 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 4</div>
+          <div class="fp-role">Independent Non-Executive Director</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#C8941A 0%,#0D3B2E 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 5</div>
+          <div class="fp-role">Non-Executive Director</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#1A6B4A 0%,#0D3B2E 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 6</div>
+          <div class="fp-role">Non-Executive Director</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#E5A820 0%,#1A6B4A 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 7</div>
+          <div class="fp-role">Non-Executive Director</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-card reveal">
+        <div class="fp-avatar" style="background:linear-gradient(140deg,#0D3B2E 0%,#2A8B62 100%);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="fp-info">
+          <div class="fp-name">Board Member 8</div>
+          <div class="fp-role">Company Secretary</div>
+          <p class="fp-bio">Placeholder bio — add this director's professional background here.</p>
+          <div class="fp-links">
+            <a href="#" class="fp-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:info@sustiglobal.com" class="fp-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-</div><!-- /page-view approach -->
+
+
+
+
+</div><!-- /page-view board -->
 
 <footer class="footer" id="siteFooter">
   <div class="wrap">

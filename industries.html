@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
 
 <style>
 /* ── DESIGN TOKENS ─────────────────────────────── */
@@ -221,6 +223,41 @@ ul{list-style:none}
   .hero-globe{animation:none}
   .m-track{animation:none}
 }
+
+/* ── Back to Top Floating Action Button ───────────────── */
+.back-to-top{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:var(--emerald);
+  color:#fff;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(13,59,46,.35);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(16px);
+  transition:opacity .25s var(--ease),transform .25s var(--ease),background .2s,visibility .25s;
+  z-index:999;
+}
+.back-to-top.visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+.back-to-top:hover{
+  background:var(--emerald-lt);
+}
+@media(max-width:600px){
+  .back-to-top{right:16px;bottom:16px;width:44px;height:44px;font-size:16px}
+}
 </style>
 </head>
 <body>
@@ -237,30 +274,36 @@ ul{list-style:none}
   <nav class="sidebar-nav">
     <div class="sb-section-label">Main</div>
     <a class="sb-link" href="index.html" data-section="home">
-      <span class="sb-icon">🏠</span> Home
+      <span class="sb-icon"><i class="fa-solid fa-house"></i></span> Home
     </a>
     <a class="sb-link" href="about.html" data-section="about">
-      <span class="sb-icon">🌿</span> About Us
+      <span class="sb-icon"><i class="fa-solid fa-leaf"></i></span> About Us
+    </a>
+    <a class="sb-link" href="team.html" data-section="team">
+      <span class="sb-icon"><i class="fa-solid fa-users"></i></span> Our Team
+    </a>
+    <a class="sb-link" href="board.html" data-section="board">
+      <span class="sb-icon"><i class="fa-solid fa-user-tie"></i></span> Board of Directors
     </a>
     <a class="sb-link" href="services.html" data-section="services">
-      <span class="sb-icon">⚙️</span> Services
+      <span class="sb-icon"><i class="fa-solid fa-gear"></i></span> Services
     </a>
     <a class="sb-link active" href="industries.html" data-section="industries">
-      <span class="sb-icon">🏭</span> Industries
+      <span class="sb-icon"><i class="fa-solid fa-industry"></i></span> Industries
     </a>
     <div class="sb-section-label">Learn More</div>
     <a class="sb-link" href="approach.html" data-section="approach">
-      <span class="sb-icon">🎯</span> Our Approach
+      <span class="sb-icon"><i class="fa-solid fa-bullseye"></i></span> Our Approach
     </a>
     <a class="sb-link" href="resources.html" data-section="resources">
-      <span class="sb-icon">📚</span> Resources
+      <span class="sb-icon"><i class="fa-solid fa-book"></i></span> Resources
     </a>
     <a class="sb-link" href="careers.html" data-section="careers">
-      <span class="sb-icon">💼</span> Careers
+      <span class="sb-icon"><i class="fa-solid fa-briefcase"></i></span> Careers
     </a>
     <div class="sb-section-label">Connect</div>
     <a class="sb-link" href="contact.html" data-section="contact">
-      <span class="sb-icon">✉️</span> Contact
+      <span class="sb-icon"><i class="fa-solid fa-envelope"></i></span> Contact
     </a>
   </nav>
   <a href="contact.html" class="sb-cta">Get in Touch &rarr;</a>
@@ -379,7 +422,7 @@ ul{list-style:none}
     <div class="ind-grid">
 
       <div class="i-card reveal">
-        <div class="i-icon">⚡</div>
+        <div class="i-icon"><i class="fa-solid fa-bolt"></i></div>
         <div class="i-body">
           <div class="i-name">Energy &amp; Utilities</div>
           <div class="i-desc">We partner with energy producers and utilities to navigate environmental regulations, reduce emissions, and transition toward cleaner, more resilient operations across the full value chain — from extraction to distribution.</div>
@@ -394,7 +437,7 @@ ul{list-style:none}
       </div>
 
       <div class="i-card reveal">
-        <div class="i-icon">🏭</div>
+        <div class="i-icon"><i class="fa-solid fa-industry"></i></div>
         <div class="i-body">
           <div class="i-name">Manufacturing &amp; Industrial</div>
           <div class="i-desc">Supporting manufacturers in decarbonising production processes, managing hazardous materials responsibly, and achieving circular economy targets through resource efficiency strategies tailored to your operations.</div>
@@ -409,7 +452,7 @@ ul{list-style:none}
       </div>
 
       <div class="i-card reveal">
-        <div class="i-icon">🏦</div>
+        <div class="i-icon"><i class="fa-solid fa-building-columns"></i></div>
         <div class="i-body">
           <div class="i-name">Financial Services</div>
           <div class="i-desc">Helping banks, investors, and private equity firms integrate ESG risk into portfolios, meet disclosure requirements, and develop green finance frameworks aligned with TCFD, GRI, and global reporting standards.</div>
@@ -424,7 +467,7 @@ ul{list-style:none}
       </div>
 
       <div class="i-card reveal">
-        <div class="i-icon">🏗️</div>
+        <div class="i-icon"><i class="fa-solid fa-building"></i></div>
         <div class="i-body">
           <div class="i-name">Infrastructure &amp; Real Estate</div>
           <div class="i-desc">Delivering environmental and social impact assessments for large-scale infrastructure projects, ensuring sustainable design, community engagement, and regulatory compliance from inception to operation.</div>
@@ -439,7 +482,7 @@ ul{list-style:none}
       </div>
 
       <div class="i-card reveal">
-        <div class="i-icon">🌾</div>
+        <div class="i-icon"><i class="fa-solid fa-wheat-awn"></i></div>
         <div class="i-body">
           <div class="i-name">Agriculture &amp; Food</div>
           <div class="i-desc">Advising agribusinesses and food producers on sustainable land use, water stewardship, deforestation-free supply chains, and nature-positive farming practices that protect ecosystems and improve long-term yields.</div>
@@ -454,7 +497,7 @@ ul{list-style:none}
       </div>
 
       <div class="i-card reveal">
-        <div class="i-icon">💻</div>
+        <div class="i-icon"><i class="fa-solid fa-laptop-code"></i></div>
         <div class="i-body">
           <div class="i-name">Technology &amp; Telecom</div>
           <div class="i-desc">Guiding tech and telecom companies in measuring and reducing their digital carbon footprint, responsibly sourcing materials, and embedding sustainability into product life cycles and data centre operations.</div>
@@ -469,7 +512,7 @@ ul{list-style:none}
       </div>
 
       <div class="i-card reveal">
-        <div class="i-icon">🏛️</div>
+        <div class="i-icon"><i class="fa-solid fa-landmark"></i></div>
         <div class="i-body">
           <div class="i-name">Public Sector &amp; Development</div>
           <div class="i-desc">Collaborating with governments, multilateral bodies, and development finance institutions to design and implement environmental policies, climate adaptation programmes, and sustainable development frameworks at national and regional scale.</div>
@@ -496,17 +539,17 @@ ul{list-style:none}
     </div>
     <div class="why-grid">
       <div class="w-card reveal">
-        <div class="w-icon">🔬</div>
+        <div class="w-icon"><i class="fa-solid fa-microscope"></i></div>
         <div class="w-title">Sector-Embedded Specialists</div>
         <div class="w-body">Our consultants don't just know sustainability — they know your industry. Each team brings years of sector-specific regulatory and operational experience.</div>
       </div>
       <div class="w-card reveal">
-        <div class="w-icon">🌍</div>
+        <div class="w-icon"><i class="fa-solid fa-earth-africa"></i></div>
         <div class="w-title">Pan-African &amp; Global Reach</div>
         <div class="w-body">With offices across Africa, Europe, Asia-Pacific and the Americas, we navigate local regulatory environments while delivering globally recognised standards.</div>
       </div>
       <div class="w-card reveal">
-        <div class="w-icon">📊</div>
+        <div class="w-icon"><i class="fa-solid fa-chart-column"></i></div>
         <div class="w-title">Measurable Outcomes</div>
         <div class="w-body">We don't deliver reports — we deliver results. Every engagement is built around clear KPIs, milestone tracking, and accountability frameworks.</div>
       </div>
@@ -567,6 +610,8 @@ ul{list-style:none}
         <div class="f-col-title">Company</div>
         <nav class="f-links">
           <a href="about.html">About Us</a>
+          <a href="team.html">Our Team</a>
+          <a href="board.html">Board of Directors</a>
           <a href="industries.html">Industries</a>
           <a href="approach.html">Our Approach</a>
           <a href="resources.html">Resources</a>
@@ -690,6 +735,26 @@ document.querySelectorAll('.f-links a[href]').forEach(function(a){
     }
   });
 });
+
+/* ── Back to Top FAB behavior ──────────────────────────── */
+(function(){
+  var backToTopBtn = document.getElementById('backToTopBtn');
+  if(!backToTopBtn) return;
+  function toggleBackToTop(){
+    if(window.scrollY > 400){
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', toggleBackToTop);
+  toggleBackToTop();
+  backToTopBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
 </script>
+
+<button class="back-to-top" id="backToTopBtn" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>
